@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.contact_bg{
+    background-image: url(../img/contact_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+:root {
+    --primary: #713347;
+    --white: #ffffffc0;
+    --background: #F8F8FF;
+    --gray: #D3D3D3;
+}
+
+.container {
+    background-color: rgba(34, 31, 46, 0.356);
+    height: 100vh;
+    position: relative;
+}
+
+.inner {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.nav_div{
+    display: block;
+    margin: 40px;
+    text-align: center;
+}
+.nav_div > h1{
+    display: inline;
+    margin-left: 20%;
+    color: var(--white);
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+}
+nav{
+    background: var(--white);
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    padding: 5px;
+    border-radius: 22px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+    flex-wrap: wrap;
+}
+
+nav > a{
+    color: rgba(0, 0, 0, 0.705);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 22px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+nav >a:hover ,.s{
+    transition: 0.25s;
+    background: rgba(62, 91, 123,1);
+    color: white;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+}
+
+label,
+input[type="text"],
+input[type="email"],
+textarea {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.inner button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.inner button:hover {
+    background-color: #45a049;
+}

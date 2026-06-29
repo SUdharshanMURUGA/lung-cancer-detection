@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.predict_bg{
+    background-image: url(../img/Lung-Cancer-Detection.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+:root {
+    --primary: #713347;
+    --white: #ffffffc0;
+    --background: #F8F8FF;
+    --gray: #D3D3D3;
+}
+
+.container {
+    background-color: rgba(34, 31, 46, 0.356);
+    height: 100vh;
+    position: relative;
+}
+
+.inner{
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    padding: 1rem;
+}
+
+.dropzone-box {
+    color: var(--primary);
+    border-radius: 2rem;
+    padding: 2rem;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 36rem;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.dropzone-box h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dropzone-area {
+    padding: 1rem;
+    position: relative;
+    margin-top: 1rem;
+    min-height: 16rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px dashed var(--primary);
+    border-radius: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.dropzone-area [type="file"] {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.dropzone-area .file-upload-icon svg {
+    height: 5rem;
+    width: 5rem;
+    margin-bottom: 0.5rem;
+    stroke: var(--primary);
+}
+
+.dropzone--over {
+    border-style: solid;
+    background-color: var(--background);
+}
+
+.dropzone-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--gray);
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.dropzone-actions button {
+    flex-grow: 1;
+    min-height: 3rem;
+    font-size: 1.2rem;
+}
+
+.dropzone-actions button:hover {
+    text-decoration: underline;
+}
+
+.dropzone-actions button[type='reset'] {
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.dropzone-actions button[type='submit'] {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+.img_viewport{
+    display: none;
+    color: var(--primary);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 36rem;
+    height: 31.1rem;
+    width: 100%;
+    background-color: var(--white);
+}
+.view_area{
+    width: 100%;
+    height: 100%;
+    border: 2px dashed var(--primary);
+    border-radius: 1rem;
+    display: flex;
+}
+#view_area{
+    padding: 30px;
+    margin: auto;
+}
+.nav_div{
+    display: block;
+    margin: 40px;
+    text-align: center;
+}
+.nav_div > h1{
+    display: inline;
+    margin-left: 20%;
+    color: var(--white);
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+}
+nav{
+    background: var(--white);
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    padding: 5px;
+    border-radius: 22px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+    flex-wrap: wrap;
+}
+
+nav > a{
+    color: rgba(0, 0, 0, 0.705);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 22px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+nav >a:hover ,.s{
+    transition: 0.25s;
+    background: rgba(62, 91, 123,1);
+    color: white;
+}

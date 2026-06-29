@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Prediction</title>
+
+    <link rel="stylesheet" href="/static/css/style_predict.css">
+    <link rel="icon" type="image/png" href="/static/img/fav_icon.png"/> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="predict_bg">
+        <div class="container">
+            <div class="nav_div">
+                <h1>Lung Cancer Detector</h1>
+                <nav>
+                    <a href="/" title="Home" aria-label="Home"><i class="fa-solid fa-house-chimney"></i></a>
+                    <a class="s" href="/predict" title="Predict" aria-label="Predict"><i class="fa-solid fa-magnifying-glass-chart bi"></i></a>
+                    <a href="/about" title="About" aria-label="About"><i class="fa-solid fa-circle-info bi"></i></a>
+                    <a href="/contact" title="Contact Us" aria-label="Contact Us"><i class="fa-solid fa-address-card bi"></i></a>
+                    <a href="/history" title="History" aria-label="History"><i class="fa-solid fa-clock-rotate-left"></i></a>
+                </nav>
+            </div>
+            <div class="inner">
+                <form action="/upload" method="post" enctype="multipart/form-data" class="dropzone-box" onsubmit="save_history(new FormData(this));">
+                    <h2>Upload and attach files</h2>
+                    <p>
+                        Attach files to this project
+                    </p>
+                    <div class="dropzone-area">
+                    
+                        <div class="file-upload-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                            </svg>
+                        </div>
+                        <p>Click to upload or drag and drop</p>
+                        <input type="file" name="file" id="file">
+                        <p class="message">No Files Selected</p>
+                    </div>
+                    <div class="dropzone-actions">
+                        <button type="reset">Cancel</button>
+                        <button type="submit" id="submit-button">Predict</button>
+                    </div>
+                </form>
+                
+                <div class="img_viewport" id="img_viewport">
+                    <div class="view_area">
+                        <img src="" alt="X-ray image here" id="view_area">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/392457a8ec.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+{"datetime": "Date: 2024-04-09 Time: 02:57:13", "result": "Large cell carcinoma", "probability": "Probability: 99.85%", "image_data": "/static/uploads/000026 (2).png"}
+{"datetime": "Date: 2024-04-09 Time: 03:00:06", "result": "Normal", "probability": "Probability: 73.83%", "image_data": "/static/uploads/Original-Lungs-CT-scan-image.png"}
+{"datetime": "Date: 2024-04-09 Time: 03:00:26", "result": "Large cell carcinoma", "probability": "Probability: 99.96%", "image_data": "/static/uploads/000113.png"}
+{"datetime": "Date: 2024-04-09 Time: 03:00:42", "result": "Large cell carcinoma", "probability": "Probability: 99.96%", "image_data": "/static/uploads/000113.png"}
+{"datetime": "Date: 2024-04-09 Time: 03:56:28", "result": "Large cell carcinoma", "probability": "Probability: 99.68%", "image_data": "/static/uploads/000003 (4).png"}

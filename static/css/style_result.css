@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.result_bg{
+    background-image: url(../img/result_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+:root {
+    --primary: #713347;
+    --white: #ffffffc0;
+    --background: #F8F8FF;
+    --gray: #D3D3D3;
+}
+
+.container {
+    background-color: rgba(34, 31, 46, 0.356);
+    min-height: 100vh;
+    position: relative;
+}
+.inner{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+
+.res_viewport{
+    margin: auto;
+    color: var(--primary);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 36rem;
+    height: 31.1rem;
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cancer_graph{
+    display: block;
+    margin: auto;
+    height: 60%;
+    padding: 5px 15px 20px 15px;
+}
+.cancer_graph > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+}
+.view_area{
+    width: 100%;
+    height: 30%;
+    border: 2px dashed var(--primary);
+    border-radius: 1rem;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.view_area2{
+    width: 100%;
+    height: 100%;
+    border: 2px dashed var(--primary);
+    border-radius: 1rem;
+    padding: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    display: flex;
+}
+#view_area{
+    border-radius: 22px;
+    margin: auto;
+}
+h1 {
+    color: var(--primary); /*Header text color*/
+    font-size: 32px;
+    font-family: 'Work Sans', sans-serif;
+}
+.result-class {
+    font-weight: bold;
+    color: #28a745; /* Predicted class text color */
+}
+.result-class.error {
+    color: #dc3545; /* Error class text color */
+}
+.nav_div{
+    display: block;
+    margin: 40px;
+    text-align: center;
+}
+.nav_div > h1{
+    display: inline;
+    margin-left: 20%;
+    color: var(--white);
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+}
+nav{
+    background: var(--white);
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    padding: 5px;
+    border-radius: 22px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+    flex-wrap: wrap;
+}
+
+nav > a{
+    color: rgba(0, 0, 0, 0.705);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 22px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+
+nav >a:hover{
+    transition: 0.25s;
+    background: rgba(62, 91, 123,1);
+    color: white;
+}
+.bl{
+    animation: blink .75s infinite;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

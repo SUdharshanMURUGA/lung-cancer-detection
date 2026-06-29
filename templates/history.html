@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History</title>
+
+    <link rel="stylesheet" href="../static/css/style_history.css">
+    <link rel="icon" type="image/png" href="/static/img/fav_icon.png"/> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="history_bg">
+        <div class="container">
+            <div class="nav_div">
+                <h1>Lung Cancer Detector</h1>
+                <nav>
+                    <a href="/" title="Home" aria-label="Home"><i class="fa-solid fa-house-chimney"></i></a>
+                    <a href="/predict" title="Predict" aria-label="Predict"><i class="fa-solid fa-magnifying-glass-chart bi"></i></a>
+                    <a href="/about" title="About" aria-label="About"><i class="fa-solid fa-circle-info bi"></i></a>
+                    <a href="/contact" title="Contact Us" aria-label="Contact Us"><i class="fa-solid fa-address-card bi"></i></a>
+                    <a class="s" href="/history" title="History" aria-label="History"><i class="fa-solid fa-clock-rotate-left"></i></a>
+                </nav>
+            </div>
+            <div class="outer">
+                <h2>Prediction History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="no">S.No</th>
+                            <th id="dt">Date & Time</th>
+                            <th id="res">Result</th>
+                            <th id="con">Confidence</th>
+                            <th id="imgs">Image</th>
+                            <th id="ac">Action</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="inner">
+                    <table>
+                        <tbody>
+                            {% for index, prediction in prediction_history|custom_enumerate(start=1) %}
+                            <tr class="hoverr">
+                                <td id="no">{{index}}</td>
+                                <td id="dt">{{prediction['datetime']}}</td>
+                                <td id="res">{{ prediction['result'] }}</td>
+                                <td id="con">{{ prediction['probability'] }}</td>
+                                <td id="imgs"><img src="{{ prediction['image_data'] }}" alt="Predicted Image"></td>
+                                <td id="ac" class="ac">
+                                    <form action="/delete_prediction" method="post">
+                                        <input type="hidden" name="index" value="{{ loop.index }}">
+                                        <button type="submit" class="del">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/392457a8ec.js" crossorigin="anonymous"></script>
+</body>
+</html>
