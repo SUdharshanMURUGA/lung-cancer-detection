@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN TOKENS
+   Subject: AI-assisted CT scan analysis. The palette borrows from
+   radiology reading-room monitors (deep ink background, cool cyan
+   scan-signal) rather than generic "AI SaaS" purple/violet defaults.
+   ============================================================ */
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-void: #0a0e14;
+  --color-surface: #10151f;
+  --color-elevated: #171e2b;
+  --color-border: #232b3a;
+  --color-border-strong: #2e3a4d;
+
+  --color-signal: #4fd8e8;
+  --color-signal-dim: #2a8b98;
+  --color-teal: #0b9c93;
+  --color-amber: #f5a623;
+  --color-rose: #e85d5d;
+
+  --color-ink: #eaf2f5;
+  --color-ink-muted: #8ca0af;
+  --color-ink-faint: #56677a;
+
+  --animate-scan-sweep: scan-sweep 3.2s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-pulse-slow: pulse-slow 2.6s ease-in-out infinite;
+}
+
+/* Light mode token overrides */
+:root[data-theme="light"] {
+  --color-void: #f3f6f8;
+  --color-surface: #ffffff;
+  --color-elevated: #eef2f5;
+  --color-border: #dce3e9;
+  --color-border-strong: #c7d1d9;
+
+  --color-ink: #0f1720;
+  --color-ink-muted: #4b5c6b;
+  --color-ink-faint: #7c8b98;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-signal);
+  color: var(--color-void);
+}
+
+/* Visible keyboard focus everywhere — accessibility floor */
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   SIGNATURE ELEMENT: scan-sweep
+   A horizontal band of light sweeping vertically across a grid of
+   slice-lines — the visual identity anchor. Reused in the hero and
+   (Phase 4) the predict page's loading state, tying the brand mark
+   directly to what the product actually does: scan analysis.
+   ============================================================ */
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.glass-panel {
+  background: color-mix(in srgb, var(--color-surface) 70%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+}
+
+.gradient-signal-text {
+  background: linear-gradient(120deg, var(--color-signal), var(--color-teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-fade-mask {
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
