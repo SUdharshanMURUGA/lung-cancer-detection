@@ -1,7 +1,7 @@
 # Pulmo AI — Lung Cancer Detection System
 
-[![Backend CI](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/backend-ci.yml)
-[![Frontend CI](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/frontend-ci.yml)
+[![Backend CI](https://github.com/SUdharshanMURUGA/lung-cancer-detection/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/SUdharshanMURUGA/lung-cancer-detection/actions/workflows/backend-ci.yml)
+[![Frontend CI](https://github.com/SUdharshanMURUGA/lung-cancer-detection/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/SUdharshanMURUGA/lung-cancer-detection/actions/workflows/frontend-ci.yml)
 
 > Replace `YOUR_USERNAME/YOUR_REPO` above once this is pushed to GitHub —
 > the badges will start reporting real pass/fail status automatically.
