@@ -96,13 +96,23 @@ for the reasoning.
 
 ## Screenshots
 
-_Not included yet — this project was built and verified end-to-end via
-HTTP/API testing in an environment without a working browser, so no
-screenshots were captured during development. Run the app locally (see
-Quick start below) and drop images into `docs/screenshots/` — a good set
-to capture is the Landing page hero, the Prediction page with a result
-card showing the probability chart, and the History page._
+### 🏠 Home Page
+![Home Page](./docs/screenshots/home-page.png)
 
+---
+
+### 📤 Upload CT Scan
+![Upload CT Scan](./docs/screenshots/prediction-upload.png)
+
+---
+
+### 🩺 Prediction Result
+![Prediction Result](./docs/screenshots/prediction-result.png)
+
+---
+
+### 📜 Prediction History
+![Prediction History](./docs/screenshots/prediction-history.png)
 ## Testing
 
 Full test-set accuracy (95.56% on 315 held-out images), confusion matrix,
